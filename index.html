@@ -918,7 +918,7 @@ class MarkdownParser {
         class GeminiAPI {
     static async sendMessage(message, conversationHistory, mode = CONFIG.DEFAULT_MODE) {
         try {
-            const response = await fetch('http://localhost:3000/api/chat', {
+            const response = await fetch('http://127.0.0.1:4040', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ message, history: conversationHistory, mode })
